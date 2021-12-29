@@ -3,7 +3,6 @@ int main(void)
 {
 	int n,i,count=0;
 	printf("Enter the number : ");
-	fflush(stdout);
 	scanf("%d",&n);
 	for(i=1;i<=n;i++)
 	{
