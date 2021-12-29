@@ -13,4 +13,5 @@ int main(void)
 		n=n/10;
 	}
 	printf("Reverse order of %d is = %d",temp,sum);
+	return 0;
 }
