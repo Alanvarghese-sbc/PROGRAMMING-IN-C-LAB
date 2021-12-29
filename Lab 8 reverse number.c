@@ -3,7 +3,6 @@ int main(void)
 {
 	int n,r,sum=0,temp;
 	printf("Enter the numbers : ");
-	fflush(stdout);
 	scanf("%d",&n);
 	temp=n;
 	while(n>0)
