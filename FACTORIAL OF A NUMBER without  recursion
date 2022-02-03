@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+	int n,r,sum=1,temp;
+	printf("Enter the number : ");
+	scanf("%d",&n);
+  temp=n;
+  while(n>0)
+  {
+    sum=sum*n;
+    n=n-1;
+  }
+  printf("FACTORIAL OF %d = %d",temp,sum);
+}
