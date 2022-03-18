@@ -1,0 +1,22 @@
+#include <stdio.h>
+void create();
+void main()
+{
+   create();  
+}
+void create()
+{
+    int n,a[10],i;
+    printf("Enter the size of the array : ");
+    scanf("%d",&n);
+    printf("\nEnter the array elements :  ");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    printf("\n The array elements are  \n");
+    for(i=0;i<n;i++)
+    {
+        printf("%d\t",a[i]);
+    }
+}
