@@ -1,0 +1,22 @@
+#include <stdio.h>
+void create();
+void main()
+{
+   create();  
+}
+void create()
+{
+    int n,a[10],i,sum=0,avg;
+    printf("Enter the size of the array : ");
+    scanf("%d",&n);
+    printf("Enter the array elements :  ");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+        sum=sum+a[i];
+    }
+  avg=sum/n;
+  printf("\nThe sum of array elements is %d",sum);
+  printf("\nAversge of the array elements is %d",avg);
+    
+}
