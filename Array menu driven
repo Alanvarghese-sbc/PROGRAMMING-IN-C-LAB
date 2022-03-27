@@ -1,0 +1,88 @@
+#include <stdio.h>
+void create();
+void insert();
+void delete();
+void display();
+int ar[10],n;
+int main(void) 
+{ 
+  int ch;
+    do
+      {
+        printf("\n!!! Array operation!!!\n");
+        printf("<<Menu>>\n1.Create\n2.Display\n3.Insert\n4.Delete\n5.Exit");
+        printf("\nEnter your choice : ");
+        scanf("%d",&ch);
+        switch(ch)
+          {
+            case 1 : create();
+                      printf("Array is created\n");
+                      break;
+            case 2 : display();
+                      break;          
+            case 3 : insert();
+                      break;
+            case 4 : delete();
+                     break;
+            case 5 : printf("Exited");
+                     break;           
+          }
+      }while(ch!=5);
+}
+
+void create()
+{
+    int i;
+    printf("Enter the size of the array : ");
+    scanf("%d",&n);
+    printf("\nEnter the array elements :  ");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&ar[i]);
+    }
+    
+}
+
+void display()
+{
+    int i;
+    printf("\n The array elemnets are\n");
+    for(i=0;i<n;i++)
+    {
+        printf("%d\t",ar[i]);
+    }
+}
+
+void insert()
+{
+  int pos,item,i;
+  i=n;
+  printf("Enter the position");
+  scanf("%d",&pos);
+  printf("Enter the element");
+  scanf("%d",&item);
+  while(i>=pos)
+    {
+      ar[i+1]=ar[i];
+      i=i-1;
+    }
+  n=n+1;
+  ar[pos]=item;
+  printf("\n New item, %d is added\n",item);
+}
+
+void delete()
+{
+    int i,item,pos;
+    printf("\nEnter the position\n");
+    scanf("%d",&pos);
+  i=pos;
+  while(i<=n-1)
+    {
+      ar[i]=ar[i+1];
+      i=i+1;
+    }
+  n=n-1;
+  printf("\n %dth element is deleted",pos);
+}
+  
