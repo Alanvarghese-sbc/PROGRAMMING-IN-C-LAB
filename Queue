@@ -70,7 +70,7 @@ int dislay()
   else
   {
     printf("QUEUE\n");
-    for(i=front;i<rear;front++)
+    for(i=front;i<=rear;front++)
       {
         printf("%d\t",queue[i]);
       }
